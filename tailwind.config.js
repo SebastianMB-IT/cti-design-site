@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -7,6 +10,10 @@ module.exports = {
     './components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Fira Code', ...defaultTheme.fontFamily.sans],
+      'serif': ['Inter', ...defaultTheme.fontFamily.serif],
+    },
     extend: {
       width: {
         '128': '32rem',

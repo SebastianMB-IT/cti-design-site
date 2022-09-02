@@ -1,27 +1,47 @@
 import '../styles/globals.css'
+import 'cti-design/dist/tailwind.css';
+
 import type { AppProps } from 'next/app'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import classNames from 'classnames'
+import { FaGithub } from 'react-icons/fa'
+import { SiStorybook, SiFigma } from 'react-icons/si'
+import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   const router = useRouter();
 
   const components = [
-    'Welcome',
-    'Alerts',
-    'Avatars',
-    'Badges',
-    'Buttons',
-    'Cards'
+    'Get Started',
+    'Alert',
+    'Avatar',
+    'Badge',
+    'Button',
+    'Card',
+    'Switch'
   ]
 
   return (
     <div className='w-full h-full flex flex-col overflow-hidden'>
       {/* Top */}
-      <div className='w-full h-20 border-b flex-none'>
+      <div className='w-full h-20 border-b flex-none flex justify-between'>
         <div className='h-full w-72 border-r flex-none'>
+          <div className='flex w-full h-full justify-center items-center text-lg text-neutral-900'>
+            CTI DESIGN
+          </div>
+        </div>
+        <div className='h-full flex justify-center items-center px-12 gap-8 text-xl text-gray-700'>
+          <a className='cursor-pointer' target='_blank' href='https://github.com/SebastianMB-IT/cti-design' rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a className='cursor-pointer' href='#storybook'>
+            <SiStorybook />
+          </a>
+          <a className='cursor-pointer' href='#figma'>
+            <SiFigma />
+          </a>
         </div>
       </div>
       {/* Bottom */}
@@ -38,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   'bg-indigo-200 text-indigo-900 font-medium focus:ring-2 focus:border-2 focus:ring-indigo-900 hover:bg-indigo-300': isActive
                 })
                 return (
-                  <Link key={component} href={`/${component === 'Welcome' ? '' : component.toLocaleLowerCase()}`} >
+                  <Link key={component} href={`/${component === 'Get Started' ? '' : component.toLocaleLowerCase()}`} >
                     <a aria-selected="true" className={classes}>
                       {component}
                     </a>
@@ -50,8 +70,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
         {/* Content */}
         <div className='w-full h-full px-12 py-12 overflow-auto'>
-          <div className='max-w-7xl m-auto'>
+          <div className='max-w-7xl m-auto px-10'>
             <Component {...pageProps} />
+            <div className='mb-28'></div>
           </div>
         </div>
       </div>
