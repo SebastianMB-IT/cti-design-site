@@ -1,11 +1,95 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
 import { Button } from 'cti-design'
-import { CopyBlock, googlecode } from "react-code-blocks";
 import snippets from '../components/snippets'
-import { HiRefresh } from 'react-icons/hi';
+import { HiRefresh } from 'react-icons/hi'
+import { Content, SectionProps } from '../components/Content'
 
 const Buttons: NextPage = () => {
+  const pageSections: SectionProps[] = [
+    {
+      title: 'Primary Button',
+      content: (
+        <>
+          <Button variant='primary'>Button</Button>
+        </>
+      ),
+      demo: snippets.button.primary,
+    },
+    {
+      title: 'Primary Button Large',
+      content: (
+        <>
+          <Button variant='primary' size='large'>
+            Button
+          </Button>
+        </>
+      ),
+      demo: snippets.button.primary,
+    },
+    {
+      title: 'Rounded Button',
+      content: (
+        <>
+          <Button variant='primary' rounded='full'>
+            Button
+          </Button>
+        </>
+      ),
+      demo: snippets.button.rounded,
+    },
+    {
+      title: 'Secondary Button',
+      content: (
+        <>
+          <Button variant='secondary'>Button</Button>
+        </>
+      ),
+      demo: snippets.button.secondary,
+    },
+    {
+      title: 'Light Button',
+      content: (
+        <>
+          <Button variant='light'>Button</Button>
+        </>
+      ),
+      demo: snippets.button.light,
+    },
+    {
+      title: 'Danger Button',
+      content: (
+        <>
+          <Button variant='danger'>Button</Button>
+        </>
+      ),
+      demo: snippets.button.danger,
+    },
+    {
+      title: 'Button With Icon',
+      content: (
+        <>
+          <Button variant='primary'>
+            <HiRefresh />
+            Button
+          </Button>
+        </>
+      ),
+      demo: snippets.button.withIcon,
+    },
+    {
+      title: 'Button With Icon Right',
+      content: (
+        <>
+          <Button variant='primary'>
+            Button
+            <HiRefresh />
+          </Button>
+        </>
+      ),
+      demo: snippets.button.withIconRight,
+    },
+  ]
 
   return (
     <div className='main-content'>
@@ -13,176 +97,7 @@ const Buttons: NextPage = () => {
         title='Button'
         description='Buttons are the most usefull components for the users to accomplish actions'
       />
-      <div className='content-section'>
-        {/* Primary Button */}
-        <h3 className='content-title'>
-          Primary Button
-        </h3>
-        <div className='content-component'>
-          <Button variant='primary'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.primary}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* Primary Button */}
-        <h3 className='content-title'>
-          Primary Button Large
-        </h3>
-        <div className='content-component'>
-          <Button variant='primary' size='large'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.large}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* Rounded button */}
-        <h3 className='content-title'>
-          Rounded Button
-        </h3>
-        <div className='content-component'>
-          <Button variant='primary' rounded='full'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.rounded}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* Secondary Button */}
-        <h3 className='content-title'>
-          Secondary Button
-        </h3>
-        <div className='content-component'>
-          <Button variant='secondary'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.secondary}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* White Button */}
-        <h3 className='content-title'>
-          White Button
-        </h3>
-        <div className='content-component'>
-          <Button variant='light'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.white}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* Red Button */}
-        <h3 className='content-title'>
-          Red Button
-        </h3>
-        <div className='content-component'>
-          <Button variant='danger'>
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.white}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* With Icon */}
-        <h3 className='content-title'>
-          Button With Icon
-        </h3>
-        <div className='content-component'>
-          <Button variant='primary'>
-            <HiRefresh />
-            Button
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.withIcon}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      <div className='content-section'>
-        {/* With Icon Right */}
-        <h3 className='content-title'>
-          Button With Icon Right
-        </h3>
-        <div className='content-component'>
-          <Button variant='primary'>
-            Button
-            <HiRefresh />
-          </Button>
-        </div>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={snippets.button.withIconRight}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
+      <Content sections={pageSections} />
     </div>
   )
 }

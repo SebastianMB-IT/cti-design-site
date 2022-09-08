@@ -2,8 +2,22 @@ import type { NextPage } from 'next'
 import Header from '../components/Header'
 import { CopyBlock, googlecode } from 'react-code-blocks'
 import snippets from '../components/snippets'
+import { Content, SectionProps } from '../components/Content'
 
 const GetStartd: NextPage = () => {
+
+  const pageSections: SectionProps[] = [
+    {
+      title: 'Install',
+      content: <></>,
+      demo: `npm install -save cti-design`,
+    },
+    {
+      title: 'Import Styles',
+      content: <></>,
+      demo: `import 'cti-design/dist/tailwind.css';`,
+    },
+  ]
 
   return (
     <div className='main-content'>
@@ -11,38 +25,7 @@ const GetStartd: NextPage = () => {
         title='CTI Design Library'
         description='Welcome to the documentation of our Design Library, a Library that provides UI Components to build applications suitable for the end user'
       />
-      {/* section */}
-      <div className='content-section'>
-        <h3 className='content-title'>
-          Install
-        </h3>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'shell'}
-            text={`npm install -save cti-design`}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
-      {/* section */}
-      <div className='content-section'>
-        <h3 className='content-title'>
-          Import Styles
-        </h3>
-        <div className='content-demo'>
-          <CopyBlock
-            language={'jsx'}
-            text={`import 'cti-design/dist/tailwind.css';`}
-            showLineNumbers={false}
-            theme={googlecode}
-            wrapLines={true}
-            codeBlock
-          />
-        </div>
-      </div>
+      <Content sections={pageSections} />
     </div>
   )
 }
