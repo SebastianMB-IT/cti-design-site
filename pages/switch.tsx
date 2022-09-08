@@ -10,7 +10,7 @@ const Switch: NextPage = () => {
     <div className='main-content'>
       <Header
         title='Switch'
-        description='Switches are used by the users to enable and to disable settings or to agree or disagree with some fields'
+        description='Switches are used to enable and to disable settings or to agree or disagree with some fields'
       />
       {/* section */}
       <div className='content-section'>
@@ -88,7 +88,25 @@ const Switch: NextPage = () => {
           />
         </div>
       </div>
-
+      {/* section */}
+      <div className='content-section'>
+        <h3 className='content-title'>
+          Switch With Label
+        </h3>
+        <div className='content-component'>
+          <CTISwitch label='This is the label' changed={(status) => console.log(status)} />
+        </div>
+        <div className='content-demo'>
+          <CopyBlock
+            language={'jsx'}
+            text={snippets.switch.withLabel}
+            showLineNumbers={false}
+            theme={googlecode}
+            wrapLines={true}
+            codeBlock
+          />
+        </div>
+      </div>
     </div>
   )
 }

@@ -19,7 +19,7 @@ const Buttons: NextPage = () => {
           Primary Button
         </h3>
         <div className='content-component'>
-          <Button styles='primary'>
+          <Button variant='primary'>
             Button
           </Button>
         </div>
@@ -40,7 +40,7 @@ const Buttons: NextPage = () => {
           Primary Button Large
         </h3>
         <div className='content-component'>
-          <Button styles='primary' size='large'>
+          <Button variant='primary' size='large'>
             Button
           </Button>
         </div>
@@ -61,7 +61,7 @@ const Buttons: NextPage = () => {
           Rounded Button
         </h3>
         <div className='content-component'>
-          <Button styles='primary' fullRounded={true}>
+          <Button variant='primary' rounded='full'>
             Button
           </Button>
         </div>
@@ -82,7 +82,7 @@ const Buttons: NextPage = () => {
           Secondary Button
         </h3>
         <div className='content-component'>
-          <Button styles='secondary'>
+          <Button variant='secondary'>
             Button
           </Button>
         </div>
@@ -103,7 +103,7 @@ const Buttons: NextPage = () => {
           White Button
         </h3>
         <div className='content-component'>
-          <Button styles='white'>
+          <Button variant='light'>
             Button
           </Button>
         </div>
@@ -124,7 +124,7 @@ const Buttons: NextPage = () => {
           Red Button
         </h3>
         <div className='content-component'>
-          <Button styles='red'>
+          <Button variant='danger'>
             Button
           </Button>
         </div>
@@ -145,7 +145,7 @@ const Buttons: NextPage = () => {
           Button With Icon
         </h3>
         <div className='content-component'>
-          <Button styles='primary'>
+          <Button variant='primary'>
             <HiRefresh />
             Button
           </Button>
@@ -167,7 +167,7 @@ const Buttons: NextPage = () => {
           Button With Icon Right
         </h3>
         <div className='content-component'>
-          <Button styles='primary'>
+          <Button variant='primary'>
             Button
             <HiRefresh />
           </Button>

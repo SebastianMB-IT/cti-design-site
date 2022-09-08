@@ -49,7 +49,7 @@ const Login: NextPage = () => {
   }
 
   return (
-    <div className="bg-gray-100 w-full h-full flex justify-center items-center">
+    <div className="bg-gray-100 w-full h-full flex justify-center items-center font-sans">
       <div className="w-128">
         {/* Top section */}
         <div className="flex gap-6 flex-col items-center">

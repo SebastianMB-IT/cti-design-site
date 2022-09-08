@@ -11,15 +11,31 @@ const GetStartd: NextPage = () => {
         title='CTI Design Library'
         description='Welcome to the documentation of our Design Library, a Library that provides UI Components to build applications suitable for the end user'
       />
+      {/* section */}
       <div className='content-section'>
-        {/* Primary Button */}
         <h3 className='content-title'>
           Install
         </h3>
         <div className='content-demo'>
           <CopyBlock
-            language={'jsx'}
+            language={'shell'}
             text={`npm install -save cti-design`}
+            showLineNumbers={false}
+            theme={googlecode}
+            wrapLines={true}
+            codeBlock
+          />
+        </div>
+      </div>
+      {/* section */}
+      <div className='content-section'>
+        <h3 className='content-title'>
+          Import Styles
+        </h3>
+        <div className='content-demo'>
+          <CopyBlock
+            language={'jsx'}
+            text={`import 'cti-design/dist/tailwind.css';`}
             showLineNumbers={false}
             theme={googlecode}
             wrapLines={true}
