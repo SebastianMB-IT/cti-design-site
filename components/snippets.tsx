@@ -192,6 +192,88 @@ const snippets = {
   </form>
 </ModalComponent>`,
   },
+  textInput: {
+    base: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+/>`,
+    large: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  size='large'
+/>`,
+    withLabel: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+/>`,
+    withLeadingIcon: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  icon={HiMail}
+/>`,
+    withTrailingIcon: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  icon={HiMail}
+  iconRight={true}
+  onIconClick={() => console.log('icon clicked')}
+/>`,
+    withError: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  error={true}
+/>`,
+    errorWithHelper: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  error={true}
+  helper='This is a helper text'
+/>`,
+    errorHelperWithIcon: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  error={true}
+  helper='This is a helper text'
+  icon={MdError}
+  iconRight={true}
+/>`,
+    squared: `<TextInput
+  placeholder='This is a placeholder'
+  name='name'
+  label='This is a label'
+  squared='top'
+/>`,
+    passwordInput: `<TextInput
+  placeholder='Enter your password'
+  name='password'
+  label='Password'
+  type={pwdDynamicVisible ? 'text' : 'password'}
+  icon={pwdDynamicVisible ? HiEyeOff : HiEye}
+  onIconClick={() => setPwdVisible(!pwdDynamicVisible)}
+  trailingIcon={true}
+/>`,
+    inputGroup: `<div className='flex flex-col -space-y-1.5'>
+  <TextInput placeholder='Enter your username' name='username' squared='bottom' />
+
+  <div className='pt-px'>
+    <TextInput
+      placeholder='Enter your password'
+      name='password'
+      squared='top'
+      type={pwdVisible ? 'text' : 'password'}
+      icon={pwdVisible ? HiEyeOff : HiEye}
+      onIconClick={() => setPwdVisible(!pwdVisible)}
+      trailingIcon={true}
+    />
+  </div>
+</div>`,
+  }
 }
 
 export default snippets

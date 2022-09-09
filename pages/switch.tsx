@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
 import { Switch as CTISwitch } from 'cti-design'
-import { CopyBlock, googlecode } from 'react-code-blocks'
 import snippets from '../components/snippets'
 import { Content, SectionProps } from '../components/Content'
 

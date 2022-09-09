@@ -21,14 +21,19 @@ export const Content: FC<ContentProps> = ({ sections }): JSX.Element => {
           <h3 className='content-title'>{section.title}</h3>
           <div className='content-component'>{section.content}</div>
           <div className='content-demo'>
-            <CopyBlock
-              language={'jsx'}
-              text={section.demo}
-              showLineNumbers={false}
-              theme={googlecode}
-              wrapLines={true}
-              codeBlock
-            />
+            {
+              section.demo && (
+                <CopyBlock
+                  language={'jsx'}
+                  text={section.demo}
+                  showLineNumbers={false}
+                  theme={googlecode}
+                  wrapLines={true}
+                  codeBlock
+                />
+              )
+            }
+
           </div>
         </div>
       ))}

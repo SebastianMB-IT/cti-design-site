@@ -19,7 +19,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     'Button',
     'Card',
     'Switch',
-    'Modal'
+    'Modal',
+    'Text Input'
   ]
 
   return (
@@ -55,14 +56,14 @@ function MyApp({ Component, pageProps }: AppProps) {
               <nav className='px-2.5 text-gray-700 text-base flex gap-2 flex-col'>
                 {
                   components.map(component => {
-                    const isActive = router.pathname === `/${component === 'Welcome' ? '' : component.toLocaleLowerCase()}`
+                    const isActive = router.pathname === `/${component === 'Get Started' ? '' : component.toLocaleLowerCase().replace(/\s/g, '')}`
                     const classes = classNames({
                       'px-4 py-3.5 rounded-2xl cursor-pointer': true,
                       'hover:bg-gray-200': !isActive,
                       'bg-indigo-200 text-indigo-900 font-medium focus:ring-2 focus:border-2 focus:ring-indigo-900 hover:bg-indigo-300': isActive
                     })
                     return (
-                      <Link key={component} href={`/${component === 'Get Started' ? '' : component.toLocaleLowerCase()}`} >
+                      <Link key={component} href={`/${component === 'Get Started' ? '' : component.toLocaleLowerCase().replace(/\s/g, '')}`} >
                         <a aria-selected="true" className={classes}>
                           {component}
                         </a>
