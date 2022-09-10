@@ -73,10 +73,19 @@ const snippets = {
   Button
 </Button>`,
     withIconRight: `<Button
-  variant='primary'
+  variant='light'
   onClick={() => console.log('clicked')}
 >
   Button
+  <HiRefresh />
+</Button>`,
+    buttonIcon: `<Button variant='light'>
+  <HiRefresh />
+</Button>`,
+   buttonIconSquared: `<Button
+  variant='primary'
+  squared='right'
+>
   <HiRefresh />
 </Button>`,
   },

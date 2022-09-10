@@ -89,6 +89,28 @@ const Buttons: NextPage = () => {
       ),
       demo: snippets.button.withIconRight,
     },
+    {
+      title: 'Button Icon',
+      content: (
+        <>
+          <Button variant='light'>
+            <HiRefresh />
+          </Button>
+        </>
+      ),
+      demo: snippets.button.buttonIcon,
+    },
+    {
+      title: 'Button Icon Squared',
+      content: (
+        <>
+          <Button variant='primary' squared='right'>
+            <HiRefresh />
+          </Button>
+        </>
+      ),
+      demo: snippets.button.buttonIconSquared,
+    },
   ]
 
   return (
