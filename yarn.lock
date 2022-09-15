@@ -724,10 +724,10 @@
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
   "version" "3.1.0"
 
-"cti-design@0.4.7":
-  "integrity" "sha512-kzoYe9/yiZvTx4vr3RVZ4BlYtb6tLKh4j/hdL2kTcemnZdDO0OhITPgE3PU/MZTXvDM1Qqpq+WRjmLIowi85ag=="
-  "resolved" "https://registry.npmjs.org/cti-design/-/cti-design-0.4.7.tgz"
-  "version" "0.4.7"
+"cti-design@0.5.3":
+  "integrity" "sha512-LKAqG/NAAkHY2Uc1Ajfen6F3a0TZweR4pAYoa2dt8f7ZpZ0QO7c/Jn0uN7svldb5uAxyML8EsT9xRmeMROhrkw=="
+  "resolved" "https://registry.npmjs.org/cti-design/-/cti-design-0.5.3.tgz"
+  "version" "0.5.3"
   dependencies:
     "@headlessui/react" "^1.6.6"
     "classnames" "^2.3.1"

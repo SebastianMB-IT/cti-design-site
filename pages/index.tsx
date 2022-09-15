@@ -10,12 +10,12 @@ const GetStartd: NextPage = () => {
     {
       title: 'Install',
       content: <></>,
-      demo: `npm install -save cti-design`,
+      demo: `npm install --save cti-design`,
     },
     {
       title: 'Import Styles',
       content: <></>,
-      demo: `import 'cti-design/dist/tailwind.css';`,
+      demo: `import 'cti-design/dist/cti.css';`,
     },
   ]
 

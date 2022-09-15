@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import 'cti-design/dist/tailwind.css';
+import 'cti-design/dist/cti.css';
 import type { AppProps } from 'next/app'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
