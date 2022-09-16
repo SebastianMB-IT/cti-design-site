@@ -8,8 +8,8 @@ import { HiMail, HiEye, HiEyeOff } from 'react-icons/hi'
 import { Content, SectionProps } from '../components/Content'
 
 const Input: NextPage = () => {
-  const [pwdVisible, setPwdGroupVisible] = useState(false)
-  const [pwdDynamicVisible, setPwdVisible] = useState(false)
+  const [pwdVisible, setPwdVisible] = useState(false)
+  const [pwdGroupVisible, setPwdGroupVisible] = useState(false)
 
   const pageSections: SectionProps[] = [
     {
@@ -114,9 +114,9 @@ const Input: NextPage = () => {
           placeholder='Enter your password'
           name='password'
           label='Password'
-          type={pwdDynamicVisible ? 'text' : 'password'}
-          icon={pwdDynamicVisible ? HiEyeOff : HiEye}
-          onIconClick={() => setPwdVisible(!pwdDynamicVisible)}
+          type={pwdVisible ? 'text' : 'password'}
+          icon={pwdVisible ? HiEyeOff : HiEye}
+          onIconClick={() => setPwdVisible(!pwdVisible)}
           trailingIcon={true}
         />
       ),
@@ -133,9 +133,9 @@ const Input: NextPage = () => {
               placeholder='Enter your password'
               name='password'
               squared='top'
-              type={pwdVisible ? 'text' : 'password'}
-              icon={pwdVisible ? HiEyeOff : HiEye}
-              onIconClick={() => setPwdGroupVisible(!pwdVisible)}
+              type={pwdGroupVisible ? 'text' : 'password'}
+              icon={pwdGroupVisible ? HiEyeOff : HiEye}
+              onIconClick={() => setPwdGroupVisible(!pwdGroupVisible)}
               trailingIcon={true}
             />
           </div>

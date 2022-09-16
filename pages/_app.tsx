@@ -74,10 +74,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               </nav>
             </div>
             {/* Content */}
-            <div className='w-full h-full px-12 py-12 overflow-auto'>
+            <div className='h-[calc(100vh-4rem)] w-full px-12 py-12 overflow-auto'>
               <div className='max-w-7xl m-auto px-10'>
                 <Component {...pageProps} />
-                <div className='mb-28'></div>
+                <div className='mb-10'></div>
               </div>
             </div>
           </div>
